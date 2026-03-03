@@ -51,7 +51,7 @@ where:
 <table align="center">
   <tr>
     <td align="center">
-      <img src="transformation chain.png" width="450"><br>
+      <img src="transformation chain .png" width="450"><br>
       <em>Transformation chain from camera to robot base frame</em>
     </td>
     <td align="center">
@@ -61,16 +61,21 @@ where:
   </tr>
 </table>
 
+## Handeye Calibration Validation 
+Validation was performed by:
+- Reconstructing checkerboard 3D points
+- Comparing them with ground-truth robot frame points
+- Computing Euclidean distance
+The quantitative results are mean error along axis and rmse.
+<p align="center"> <img src="validation_method.png" width="700"> </p> <p align="center"> <img src="validation.png" width="700"> </p>
 
 ## Robot simulation (ROS2 + Movelt2)
 The simulation is performed using:
+- ROS2 Humble
+- MoveIt2
+- lbr-stack
+- RViz
+Motion strategy consists in a planar traslation in xy followed by a perpendicular descent along Z. 
 
-ROS2 Humble
-
-MoveIt2
-
-lbr-stack
-
-RViz
-
+#Installation 
 
