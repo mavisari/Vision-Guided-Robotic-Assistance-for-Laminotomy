@@ -33,10 +33,11 @@ After detection:
 
 As a result, a realtime detection with centroid calculation is obtained. Stability is given by a Kalman filter application.
 
-<p align="center"> <img src="objectdetection.png" width="800"> </p>
+<p align="center"> <img src="objectdetection.PNG" width="800"> </p>
 
 ## Hand-eye Calibration
 Camera Intrinsic Calibration is perfomed usign OpenCV and images with reprojection error > 0.50 px were discarded. The rigid trasformation between camera and end effector is estimated solving:
+
 $$
 A_i X = X B_i
 $$
