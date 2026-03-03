@@ -22,6 +22,7 @@ The L4-L5 laminae region is detected using YOLOv8.
 from ultralytics import YOLO
 model = YOLO("yolov8s.pt")
 model.train(data="data.yaml", epochs=50, batch=16)
+'''
 
 After detection:
 1. Bounding box center is computed
