@@ -41,4 +41,10 @@ $$
 A_i X = X B_i
 $$
 
+where:
+
+- $A_i$ represents the motion of the end-effector in the base frame  
+- $B_i$ represents the motion of the calibration target in the camera frame  
+- $X$ is the unknown camera-to-end-effector transformation
+
 
