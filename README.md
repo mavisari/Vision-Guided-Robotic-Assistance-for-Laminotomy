@@ -70,11 +70,11 @@ The quantitative results are mean error along axis and rmse.
 <table align="center">
   <tr>
     <td align="center">
-      <img src="validation_method.png" width="450"><br>
+      <img src="validation_method.png" width="300"><br>
       <em>Hand–eye validation methodology</em>
     </td>
     <td align="center">
-      <img src="validation.png" width="450"><br>
+      <img src="validation.png" width="300"><br>
       <em>Validation results in RViz</em>
     </td>
   </tr>
@@ -86,7 +86,38 @@ The simulation is performed using:
 - MoveIt2
 - lbr-stack
 - RViz
-Motion strategy consists in a planar traslation in xy followed by a perpendicular descent along Z. 
+Motion strategy consists in a planar traslation in xy followed by a perpendicular descent along Z.
 
-#Installation 
+## Limitations 
+- Depth instability at close range
+- Systematic Z-axis calibration error
+- Simulation-only validation
+- Static centroid assumption
 
+## Future Work
+- Improved depth-axis excitation
+- Closed-lopp visual servoing
+- Respiratory motion compensation
+- Real robot deployment 
+
+# Installation 
+## Python Dependencies 
+```bash
+pip install ultralytics
+pip install opencv-python
+pip install numpy
+pip install pyrealsense2
+pip install pandas
+```
+## ROS2 SetUp 
+Install: 
+- ROS2 Humble
+- Movelt2
+- lbr-stack
+  
+Then build:
+
+```bash
+colcon build
+source install/setup.bash
+```
