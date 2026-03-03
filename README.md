@@ -10,10 +10,21 @@ The proposed system combines:
 - Hand–eye calibration
 - Coordinate transformation into the robot reference frame
 - Simulation of robot-assisted motion planning
-- 
+ 
 <p align="center"> <img src="workflow.png" width="800"> </p>
 
-The entire workflow has been validated in a simulated environment using a KUKA LBR iiwa 7 manipulator. Images were acquired using an Intel RealSense D435 camera (acqimm.py), with resolution of 640x480. This resolution was used as a trade off between image detail and a fast processing for a realtime detection. 
+The entire workflow has been validated in a simulated environment using a KUKA LBR iiwa 7 manipulator. Images were acquired using an Intel RealSense D435 camera (acqimm.py), with resolution of 640x480. This resolution was used as a trade off between image detail and a fast processing for a realtime detection. These images formed the raw dataset. The overall dataset was created through Robotflow. 
 
 ## Object Detection 
+The L4-L5 laminae region is detected using YOLOv8. 
+
+from ultralytics import YOLO
+model = YOLO("yolov8s.pt")
+model.train(
+    data="dataset/data.yaml",
+    epochs=50,
+    batch=16,
+    imgsz=640
+)
+
 
